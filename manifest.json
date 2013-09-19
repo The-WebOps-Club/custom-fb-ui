@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Custom-FB-UI",
+  "description": "",
+  "version": "1.0",
+  "background": {"scripts": ["background.js"]},
+  "permissions": [
+    "tabs","*://www.facebook.com/*"
+  ],
+  "page_action": {
+//    "default_icon": "icon-48.png",
+    "default_title": "Custom-FB-UI"
+  },
+/*  "icons" : {
+    "19" : "icon-19.png",
+    "128" : "icon-128.png"
+  },*/
+  "content_scripts":[
+    {
+      "matches":["*://www.facebook.com/*"],
+//      "css":["bootstrap.min.css","bootstrap-theme.min.css"],
+      "js":["jquery-1.10.2.min.js","bootstrap.min.js"],
+      "all_frames":true
+    }
+  ]
+}
